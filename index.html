@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>SnapFusion</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="./resources/bootstrap.min.css">
+    <link rel="stylesheet" href="./resources/font-awesome.min.css">
+    <link rel="stylesheet" href="./resources/codemirror.min.css">
+    <link rel="stylesheet" href="./resources/app.css">
+    <link rel="stylesheet" href="./resources/bootstrap.min(1).css">
+
+    <script src="./resources/jquery.min.js"></script>
+    <script src="./resources/bootstrap.min.js"></script>
+    <script src="./resources/codemirror.min.js"></script>
+    <script src="./resources/clipboard.min.js"></script>
+
+    <script src="./resources/app.js"></script>
+</head>
+
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+                SnapFusion: Text-to-Image Diffusion Model on Mobile Devices within Two Seconds<br>
+            </h2>
+            <h3 class="col-md-12 text-center">
+            </h3>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://scholar.google.com/citations?user=XUj8koUAAAAJ&hl=en">
+                            Yanyu Li
+                        </a>&dagger;
+                        <br>Snap Inc.
+                    </li>
+                    <li>
+                        <a href="http://huanwang.tech/">
+                            Huan Wang
+                        </a>&dagger;
+                        <br>Snap Inc.
+                    </li>
+                    <li>
+                        <a href="https://scholar.google.com/citations?user=X9iggBcAAAAJ&hl=en">
+                            Qing Jin
+                        </a>&dagger;
+                        <br>Snap Inc.
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/erichuju/">
+                            Ju Hu
+                        </a>
+                        <br>Snap Inc.
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/pashachemerys/">
+                            Pavlo Chemerys
+                        </a>
+                        <br>Snap Inc.
+                    </li><br>
+                    <li>
+                        <a href="https://coe.northeastern.edu/people/fu-yun/">
+                            Yun Fu
+                        </a>
+                        <br>Northeastern Unviersity
+                    </li>
+                    <li>
+                        <a href="https://coe.northeastern.edu/people/wang-yanzhi/">
+                            Yanzhi Wang
+                        </a>
+                        <br>Northeastern Unviersity
+                    </li>
+                    <li>
+                        <a href="http://www.stulyakov.com/">
+                            Sergey Tulyakov
+                        </a>
+                        <br>Snap Inc.
+                    </li>
+                    <li>
+                        <a href="https://alanspike.github.io/">
+                            Jian Ren
+                        </a>&dagger;
+                        <br>Snap Inc.
+                    </li>
+                </ul>
+                &dagger; Equal contribution.
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4 text-center">
+                <ul class="nav nav-pills nav-justified">
+                    <li>
+                        <a href="https://arxiv.org/abs/xxx">
+                            <img src="images/paper.png" height="80px">
+                            <h4><strong>Paper</strong></h4>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <img src="images/teaser.jpg" class="img-responsive" alt="overview"><br>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <p class="text-justify">
+                    Text-to-image diffusion models can create stunning images from natural language descriptions that
+                    rival the work of professional artists and photographers. However, these models are large, with
+                    complex network architectures and tens of denoising iterations, making them computationally
+                    expensive and slow to run. As a result, high-end GPUs and cloud-based inference are required to run
+                    diffusion models at scale. This is costly and has privacy implications, especially when user data is
+                    sent to a third party. To overcome these challenges, we present a generic approach that, for the
+                    first time, unlocks running text-to-image diffusion models on mobile devices in <i>less than 2
+                        seconds</i>.
+                    We achieve so by introducing efficient network architecture and improving step distillation.
+                    Specifically, we propose an efficient UNet by identifying the redundancy of the original
+                    model and reducing the computation of the image decoder via data distillation.
+                    Further, we enhance the step distillation by exploring training strategies and introducing
+                    regularization from classifier-free guidance. Our extensive experiments on MS-COCO show that
+                    our model with 8 denoising steps achieves better FID and CLIP scores than Stable Diffusion
+                    v1.5 with 50 steps. Our work democratizes content creation by bringing powerful text-to-image
+                    diffusion models to the hands of users.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    On-Device Demo
+                </h3>
+                <div class="text-center">
+                    <div style="position:relative;padding-top:56.25%;">
+                        <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                            src="https://www.youtube.com/embed/zK5PQ3Oj_L8" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Comparison w/ Stable Diffusion v1.5 on MS-COCO 2014 validation set (30K samples)
+                </h3>
+                <img src="images/fid_vs_clipscore_30k.jpg" class="img-responsive" alt="overview"><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    More Example Generated Images
+                </h3>
+                <img src="images/more_examples.jpg" class="img-responsive" alt="overview"><br>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>
+                Citation
+            </h3>
+            <div class="form-group col-md-10 col-md-offset-1">
+                <textarea id="bibtex" class="form-control" readonly="" style="display: none;">
+@article{li2023snap,
+    title={SnapFusion: Text-to-Image Diffusion Model on Mobile Devices within Two Seconds},
+    author={Li, Yanyu and Wang, Huan and Jin, Qing and Hu, Ju and Chemerys, Pavlo and Fu, Yun and Wang, Yanzhi and Tulyakov, Sergey and Ren, Jian},
+    journal={arXiv preprint},
+    year={2023}
+}</textarea>
+                <div class="CodeMirror cm-s-default CodeMirror-wrap">
+                    <div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 4px; left: 4px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <p style="color:gray; text-align:right">
+                <a href="http://mgharbi.com/">Website Credits</a>.
+            </p>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
